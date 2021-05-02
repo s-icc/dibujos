@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+}
+
+.picture {
+    width: 100%;
+}
