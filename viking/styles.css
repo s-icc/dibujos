@@ -3,13 +3,59 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-}
-
-.container {
-    width: 400px;
-    height: 400px;
+    font-size: 10px;
 }
 
 .picture {
     width: 100%;
+    position: absolute;
+}
+
+.draw {
+    width: 40em;
+    height: 40em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* max width of the draw: 296px or 29.6em */
+
+.helmet {
+    width: 13.9em;
+    height: 14em;
+    position: absolute;
+    background-image: linear-gradient(
+        to bottom,
+        #302d40 0% 50%,
+        transparent 50% 100%
+    );
+    top: 3.4em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+.helmet::before {
+    content: '';
+    position: absolute;
+    border-bottom: 1em solid #72757e;
+    border-left: 3.3em solid transparent;
+    border-right: 3.3em solid transparent;
+    top: -0.6em;
+}
+
+.helmet::after {
+    content: '';
+    position: absolute;
+    width: 4.8em;
+    height: 4.8em;
+    background-image: linear-gradient(
+        to bottom right,
+        transparent 50%,
+        #72757e 50%
+    );
+    transform: rotate(45deg);
+    top: -2em;
 }
