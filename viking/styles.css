@@ -19,7 +19,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .draw {
@@ -106,3 +106,34 @@ body {
 }
 
 /* BASE DEL CASCO */
+
+.helmet-base {
+    position: absolute;
+    border-bottom: 1.05em solid var(--grey);
+    top: 10.39em;
+}
+
+.helmet-base,
+.helmet-base::before {
+    width: 13.9em;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+}
+
+.helmet-base::before {
+    border-top: 1.05em solid var(--grey);
+    top: 1.05em;
+    left: -1em;
+}
+
+.helmet-base::after {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background-color: var(--light-grey);
+    top: 0.67em;
+    left: 0.86em;
+    box-shadow: 2.3em 0 0 0 var(--light-grey), 4.6em 0 0 0 var(--light-grey),
+        6.9em 0 0 0 var(--light-grey), 9.3em 0 0 0 var(--light-grey),
+        11.5em 0 0 0 var(--light-grey);
+}
