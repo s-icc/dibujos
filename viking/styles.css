@@ -33,7 +33,6 @@ body {
 .picture {
     width: 100%;
     position: absolute;
-    filter: opacity(0.4);
 }
 
 /* max width of the draw: 296px or 29.6em */
@@ -136,4 +135,61 @@ body {
     box-shadow: 2.3em 0 0 0 var(--light-grey), 4.6em 0 0 0 var(--light-grey),
         6.9em 0 0 0 var(--light-grey), 9.3em 0 0 0 var(--light-grey),
         11.5em 0 0 0 var(--light-grey);
+}
+
+/* CABEZA, OREJAS Y OJOS */
+
+.head {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    background-color: var(--light-pink);
+    border-radius: 50%;
+    transform: translate(-7em, 13.1em);
+    box-shadow: 14em 0 0 0 var(--light-pink);
+}
+
+.head::before {
+    width: 13.9em;
+    height: 10em;
+    background-color: var(--light-pink);
+    transform: translate(1.05em, -0.65em);
+}
+
+.head::after {
+    width: 4.6em;
+    height: 4.6em;
+    background-color: var(--dark-pink);
+    border-radius: 50%;
+    transform: translate(2.58em, -4.45em);
+    box-shadow: 6.23em 0 0 0 var(--dark-pink);
+}
+
+/* NARIZ */
+
+.nose {
+    width: 2.45em;
+    position: absolute;
+    top: 11.4em;
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    border-bottom: 5.05em solid var(--dark-pink);
+}
+
+.nose::before {
+    transform: translate(-0.3em, 5.05em);
+    border-top: 0.88em solid var(--dark-pink);
+    border-left: 1.53em solid transparent;
+    border-right: 1.53em solid transparent;
+}
+
+/* BOCA */
+
+.mouth {
+    width: 3.3em;
+    height: 1.2em;
+    position: absolute;
+    top: 17.75em;
+    background-color: var(--dark-pink);
+    border-radius: 50%;
 }
