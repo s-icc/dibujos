@@ -137,7 +137,7 @@ body {
         11.5em 0 0 0 var(--light-grey);
 }
 
-/* CABEZA, OREJAS Y OJOS */
+/* OREJAS */
 
 .head {
     width: 2em;
@@ -149,12 +149,16 @@ body {
     box-shadow: 14em 0 0 0 var(--light-pink);
 }
 
+/* CABEZA */
+
 .head::before {
     width: 13.9em;
     height: 10em;
     background-color: var(--light-pink);
     transform: translate(1.05em, -0.65em);
 }
+
+/* OJOS */
 
 .head::after {
     width: 4.6em;
@@ -163,6 +167,25 @@ body {
     border-radius: 50%;
     transform: translate(2.58em, -4.45em);
     box-shadow: 6.23em 0 0 0 var(--dark-pink);
+}
+
+/* CABELLO */
+
+.hair {
+    width: 0.85em;
+    height: 1.85em;
+    position: absolute;
+    background-color: var(--orange);
+    border-radius: 100% 0% 100% 0% / 0% 40% 60% 100%;
+    transform: translate(-6.52em, 12.17em);
+}
+
+.hair::before {
+    width: 0.85em;
+    height: 1.85em;
+    background-color: var(--orange);
+    border-radius: 0% 100% 0% 100% / 40% 0% 100% 60%;
+    left: 13.04em;
 }
 
 /* NARIZ */
@@ -177,10 +200,10 @@ body {
 }
 
 .nose::before {
-    transform: translate(-0.3em, 5.05em);
+    transform: translate(-0.34em, 5.03em);
     border-top: 0.88em solid var(--dark-pink);
-    border-left: 1.53em solid transparent;
-    border-right: 1.53em solid transparent;
+    border-left: 1.57em solid transparent;
+    border-right: 1.57em solid transparent;
 }
 
 /* BOCA */
@@ -192,4 +215,38 @@ body {
     top: 17.75em;
     background-color: var(--dark-pink);
     border-radius: 50%;
+}
+
+/* BARBA */
+
+.beard {
+    width: 6.8em;
+    height: 6.8em;
+    position: absolute;
+    border-radius: 50%;
+    border: 1.4em solid var(--orange);
+    top: 16.45em;
+    box-shadow: -6.9em -4.9em 0 -2.38em var(--dark-orange),
+        6.9em -4.9em 0 -2.38em var(--dark-orange),
+        -4.8em 3.5em 0 -1.3em var(--dark-orange),
+        4.8em 3.5em 0 -1.3em var(--dark-orange);
+}
+
+.beard::before {
+    width: 10.4em;
+    height: 10.4em;
+    border-radius: 50%;
+    background-color: var(--orange);
+    transform: translate(-1.8em, 2.8em);
+    box-shadow: -6.9em -3.85em 0 -0.34em var(--orange),
+        6.95em -3.85em 0 -0.34em var(--orange);
+}
+
+.beard::after {
+    width: 4.9em;
+    height: 4.8em;
+    border-radius: 50%;
+    transform: translate(1em, 2.8em);
+    box-shadow: -1.3em 2.1em 0 -0.9em var(--dark-orange),
+        1.3em 2.1em 0 -0.9em var(--dark-orange);
 }
