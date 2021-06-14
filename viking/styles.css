@@ -8,31 +8,23 @@
     --dark-orange: #e33b17;
 }
 
-*::before,
-*::after {
-    content: '';
+div[class]::before,
+div[class]::after,
+div[class] {
     position: absolute;
+}
+
+div[class]::before,
+div[class]::after {
+    content: '';
 }
 
 body {
     margin: 0;
     height: 100vh;
-    display: grid;
-    place-items: center;
-    font-size: 20px;
-}
-
-.draw {
-    width: 40em;
-    height: 40em;
-    position: relative;
     display: flex;
     justify-content: center;
-}
-
-.picture {
-    width: 100%;
-    position: absolute;
+    font-size: 20px;
 }
 
 /* max width of the draw: 296px or 29.6em */
@@ -42,7 +34,6 @@ body {
 .helmet {
     width: 13.9em;
     height: 14em;
-    position: absolute;
     background-image: linear-gradient(
         to bottom,
         var(--dark-grey) 0% 50%,
@@ -74,7 +65,6 @@ body {
 .right-horn {
     width: 14.5em;
     height: 11em;
-    position: absolute;
     border-radius: 50% 50% 93% 7% / 70% 50% 50% 30%;
     box-shadow: inset 0.55em 3.95em 0 0 var(--grey);
 }
@@ -107,7 +97,6 @@ body {
 /* BASE DEL CASCO */
 
 .helmet-base {
-    position: absolute;
     border-bottom: 1.05em solid var(--grey);
     top: 10.39em;
 }
@@ -142,7 +131,6 @@ body {
 .head {
     width: 2em;
     height: 2em;
-    position: absolute;
     background-color: var(--light-pink);
     border-radius: 50%;
     transform: translate(-7em, 13.1em);
@@ -174,7 +162,6 @@ body {
 .hair {
     width: 0.85em;
     height: 1.85em;
-    position: absolute;
     background-color: var(--orange);
     border-radius: 100% 0% 100% 0% / 0% 40% 60% 100%;
     transform: translate(-6.52em, 12.17em);
@@ -211,7 +198,6 @@ body {
 .mouth {
     width: 3.3em;
     height: 1.2em;
-    position: absolute;
     top: 17.75em;
     background-color: var(--dark-pink);
     border-radius: 50%;
@@ -222,7 +208,6 @@ body {
 .beard {
     width: 6.8em;
     height: 6.8em;
-    position: absolute;
     border-radius: 50%;
     border: 1.4em solid var(--orange);
     top: 16.45em;
