@@ -1,237 +1,247 @@
 :root {
-    --dark-grey: #302d40;
-    --grey: #72757e;
-    --light-grey: #8d8f9c;
-    --light-pink: #f6bfba;
-    --dark-pink: #ed9a8c;
-    --orange: #ff461a;
-    --dark-orange: #e33b17;
+	--dark-grey: #302d40;
+	--grey: #72757e;
+	--light-grey: #8d8f9c;
+	--light-pink: #f6bfba;
+	--dark-pink: #ed9a8c;
+	--orange: #ff461a;
+	--dark-orange: #e33b17;
 }
 
 div[class]::before,
 div[class]::after,
-div[class] {
-    position: absolute;
+div.draw div {
+	position: absolute;
 }
 
 div[class]::before,
 div[class]::after {
-    content: '';
+	content: '';
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	font-size: 20px;
+	background-color: #b4c5b6;
+	overflow: hidden;
 }
 
 /* max width of the draw: 296px or 29.6em */
 
+.draw {
+	width: 40em;
+	height: 40em;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
 /* PARTE CENTRAL DEL CASCO */
 
 .helmet {
-    width: 13.9em;
-    height: 14em;
-    background-image: linear-gradient(
-        to bottom,
-        var(--dark-grey) 0% 50%,
-        transparent 50% 100%
-    );
-    top: 3.4em;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+	width: 13.9em;
+	height: 14em;
+	background-image: linear-gradient(
+		to bottom,
+		var(--dark-grey) 0% 50%,
+		transparent 50% 100%
+	);
+	top: 3.4em;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
 }
 
 .helmet::before {
-    border-bottom: 1em solid var(--grey);
-    border-left: 3.5em solid transparent;
-    border-right: 3.5em solid transparent;
-    top: -0.6em;
+	border-bottom: 1em solid var(--grey);
+	border-left: 3.5em solid transparent;
+	border-right: 3.5em solid transparent;
+	top: -0.6em;
 }
 
 .helmet::after {
-    border-top: 3.5em solid var(--grey);
-    border-left: 3.5em solid transparent;
-    border-right: 3.5em solid transparent;
-    top: 0.4em;
+	border-top: 3.5em solid var(--grey);
+	border-left: 3.5em solid transparent;
+	border-right: 3.5em solid transparent;
+	top: 0.4em;
 }
 
 /* CUERNO IZQUIERDO Y DERECHO DEL CASCO */
 
 .left-horn,
 .right-horn {
-    width: 14.5em;
-    height: 11em;
-    border-radius: 50% 50% 93% 7% / 70% 50% 50% 30%;
-    box-shadow: inset 0.55em 3.95em 0 0 var(--grey);
+	width: 14.5em;
+	height: 11em;
+	border-radius: 50% 50% 93% 7% / 70% 50% 50% 30%;
+	box-shadow: inset 0.55em 3.95em 0 0 var(--grey);
 }
 
 .left-horn {
-    transform: translate(-7em, 2.7em) rotate(10deg);
+	transform: translate(-7em, 2.7em) rotate(10deg);
 }
 
 .right-horn {
-    transform: translate(7em, 2.7em) rotateY(180deg) rotate(10deg);
+	transform: translate(7em, 2.7em) rotateY(180deg) rotate(10deg);
 }
 
 .left-horn::before,
 .right-horn::before {
-    width: 14em;
-    height: 8.9em;
-    border-radius: 50% 50% 97% 3% / 70% 50% 50% 30%;
-    transform: translate(0.7em, 1em);
-    box-shadow: inset 0.08em 2.7em 0 0 var(--light-grey);
+	width: 14em;
+	height: 8.9em;
+	border-radius: 50% 50% 97% 3% / 70% 50% 50% 30%;
+	transform: translate(0.7em, 1em);
+	box-shadow: inset 0.08em 2.7em 0 0 var(--light-grey);
 }
 
 .left-horn::after,
 .right-horn::after {
-    width: 4em;
-    height: 2em;
-    background-color: var(--grey);
-    transform: translate(7.15em, 1.6em) rotate(-70deg);
+	width: 4em;
+	height: 2em;
+	background-color: var(--grey);
+	transform: translate(7.15em, 1.6em) rotate(-70deg);
 }
 
 /* BASE DEL CASCO */
 
 .helmet-base {
-    border-bottom: 1.05em solid var(--grey);
-    top: 10.39em;
+	border-bottom: 1.05em solid var(--grey);
+	top: 10.39em;
 }
 
 .helmet-base,
 .helmet-base::before {
-    width: 13.9em;
-    border-left: 1em solid transparent;
-    border-right: 1em solid transparent;
+	width: 13.9em;
+	border-left: 1em solid transparent;
+	border-right: 1em solid transparent;
 }
 
 .helmet-base::before {
-    border-top: 1.05em solid var(--grey);
-    top: 1.05em;
-    left: -1em;
+	border-top: 1.05em solid var(--grey);
+	top: 1.05em;
+	left: -1em;
 }
 
 .helmet-base::after {
-    width: 0.7em;
-    height: 0.7em;
-    border-radius: 50%;
-    background-color: var(--light-grey);
-    top: 0.67em;
-    left: 0.86em;
-    box-shadow: 2.3em 0 0 0 var(--light-grey), 4.6em 0 0 0 var(--light-grey),
-        6.9em 0 0 0 var(--light-grey), 9.3em 0 0 0 var(--light-grey),
-        11.5em 0 0 0 var(--light-grey);
+	width: 0.7em;
+	height: 0.7em;
+	border-radius: 50%;
+	background-color: var(--light-grey);
+	top: 0.67em;
+	left: 0.86em;
+	box-shadow: 2.3em 0 0 0 var(--light-grey), 4.6em 0 0 0 var(--light-grey),
+		6.9em 0 0 0 var(--light-grey), 9.3em 0 0 0 var(--light-grey),
+		11.5em 0 0 0 var(--light-grey);
 }
 
 /* OREJAS */
 
 .head {
-    width: 2em;
-    height: 2em;
-    background-color: var(--light-pink);
-    border-radius: 50%;
-    transform: translate(-7em, 13.1em);
-    box-shadow: 14em 0 0 0 var(--light-pink);
+	width: 2em;
+	height: 2em;
+	background-color: var(--light-pink);
+	border-radius: 50%;
+	transform: translate(-7em, 13.1em);
+	box-shadow: 14em 0 0 0 var(--light-pink);
 }
 
 /* CABEZA */
 
 .head::before {
-    width: 13.9em;
-    height: 10em;
-    background-color: var(--light-pink);
-    transform: translate(1.05em, -0.65em);
+	width: 13.9em;
+	height: 10em;
+	background-color: var(--light-pink);
+	transform: translate(1.05em, -0.65em);
 }
 
 /* OJOS */
 
 .head::after {
-    width: 4.6em;
-    height: 4.6em;
-    background-color: var(--dark-pink);
-    border-radius: 50%;
-    transform: translate(2.58em, -4.45em);
-    box-shadow: 6.23em 0 0 0 var(--dark-pink);
+	width: 4.6em;
+	height: 4.6em;
+	background-color: var(--dark-pink);
+	border-radius: 50%;
+	transform: translate(2.58em, -4.45em);
+	box-shadow: 6.23em 0 0 0 var(--dark-pink);
 }
 
 /* CABELLO */
 
 .hair {
-    width: 0.85em;
-    height: 1.85em;
-    background-color: var(--orange);
-    border-radius: 100% 0% 100% 0% / 0% 40% 60% 100%;
-    transform: translate(-6.52em, 12.17em);
+	width: 0.85em;
+	height: 1.85em;
+	background-color: var(--orange);
+	border-radius: 100% 0% 100% 0% / 0% 40% 60% 100%;
+	transform: translate(-6.52em, 12.17em);
 }
 
 .hair::before {
-    width: 0.85em;
-    height: 1.85em;
-    background-color: var(--orange);
-    border-radius: 0% 100% 0% 100% / 40% 0% 100% 60%;
-    left: 13.04em;
+	width: 0.85em;
+	height: 1.85em;
+	background-color: var(--orange);
+	border-radius: 0% 100% 0% 100% / 40% 0% 100% 60%;
+	left: 13.04em;
 }
 
 /* NARIZ */
 
 .nose {
-    width: 2.45em;
-    position: absolute;
-    top: 11.4em;
-    border-left: 0.3em solid transparent;
-    border-right: 0.3em solid transparent;
-    border-bottom: 5.05em solid var(--dark-pink);
+	width: 2.45em;
+	position: absolute;
+	top: 11.4em;
+	border-left: 0.3em solid transparent;
+	border-right: 0.3em solid transparent;
+	border-bottom: 5.05em solid var(--dark-pink);
 }
 
 .nose::before {
-    transform: translate(-0.34em, 5.03em);
-    border-top: 0.88em solid var(--dark-pink);
-    border-left: 1.57em solid transparent;
-    border-right: 1.57em solid transparent;
+	transform: translate(-0.34em, 5.03em);
+	border-top: 0.88em solid var(--dark-pink);
+	border-left: 1.57em solid transparent;
+	border-right: 1.57em solid transparent;
 }
 
 /* BOCA */
 
 .mouth {
-    width: 3.3em;
-    height: 1.2em;
-    top: 17.75em;
-    background-color: var(--dark-pink);
-    border-radius: 50%;
+	width: 3.3em;
+	height: 1.2em;
+	top: 17.75em;
+	background-color: var(--dark-pink);
+	border-radius: 50%;
 }
 
 /* BARBA */
 
 .beard {
-    width: 6.8em;
-    height: 6.8em;
-    border-radius: 50%;
-    border: 1.4em solid var(--orange);
-    top: 16.45em;
-    box-shadow: -6.9em -4.9em 0 -2.38em var(--dark-orange),
-        6.9em -4.9em 0 -2.38em var(--dark-orange),
-        -4.8em 3.5em 0 -1.3em var(--dark-orange),
-        4.8em 3.5em 0 -1.3em var(--dark-orange);
+	width: 6.8em;
+	height: 6.8em;
+	border-radius: 50%;
+	border: 1.4em solid var(--orange);
+	top: 16.45em;
+	box-shadow: -6.9em -4.9em 0 -2.38em var(--dark-orange),
+		6.9em -4.9em 0 -2.38em var(--dark-orange),
+		-4.8em 3.5em 0 -1.3em var(--dark-orange),
+		4.8em 3.5em 0 -1.3em var(--dark-orange);
 }
 
 .beard::before {
-    width: 10.4em;
-    height: 10.4em;
-    border-radius: 50%;
-    background-color: var(--orange);
-    transform: translate(-1.8em, 2.8em);
-    box-shadow: -6.9em -3.85em 0 -0.34em var(--orange),
-        6.95em -3.85em 0 -0.34em var(--orange);
+	width: 10.4em;
+	height: 10.4em;
+	border-radius: 50%;
+	background-color: var(--orange);
+	transform: translate(-1.8em, 2.8em);
+	box-shadow: -6.9em -3.85em 0 -0.34em var(--orange),
+		6.95em -3.85em 0 -0.34em var(--orange);
 }
 
 .beard::after {
-    width: 4.9em;
-    height: 4.8em;
-    border-radius: 50%;
-    transform: translate(1em, 2.8em);
-    box-shadow: -1.3em 2.1em 0 -0.9em var(--dark-orange),
-        1.3em 2.1em 0 -0.9em var(--dark-orange);
+	width: 4.9em;
+	height: 4.8em;
+	border-radius: 50%;
+	transform: translate(1em, 2.8em);
+	box-shadow: -1.3em 2.1em 0 -0.9em var(--dark-orange),
+		1.3em 2.1em 0 -0.9em var(--dark-orange);
 }
